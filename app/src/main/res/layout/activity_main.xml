@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/txt_encabezado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_encabezado"
+        android:text="Encabezado del articulo"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/tam_letra1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_encabezado"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_subcabecera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/padding_encabezado"
+                android:text="Subcabecera del articulo"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tam_letra2" />
+
+            <TextView
+                android:id="@+id/txt_articulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margen_articulo"
+                android:layout_marginLeft="@dimen/margen_articulo"
+                android:layout_marginTop="@dimen/margen_articulo"
+                android:layout_marginEnd="@dimen/margen_articulo"
+                android:layout_marginRight="@dimen/margen_articulo"
+                android:layout_marginBottom="@dimen/margen_articulo"
+                android:autoLink="all"
+                android:lineSpacingExtra="@dimen/separacion_lineas"
+                android:text="@string/texto_articulo" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
